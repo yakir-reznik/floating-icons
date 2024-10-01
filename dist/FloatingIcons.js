@@ -280,5 +280,5 @@ function parseCssValue(cssValue) {
     console.log(`Invalid CSS value: "${cssValue}". Example for valid values: "10px", "1em", "100%", "5vw", ...`);
     return [0, "px"];
 }
-export const createFloatingIcons = (args) => new FloatingIcons(args);
-export default createFloatingIcons;
+export const useFloatingIcons = (args) => new FloatingIcons(args);
+export default useFloatingIcons;

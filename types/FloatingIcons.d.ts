@@ -57,6 +57,6 @@ declare class FloatingIcons {
     constructor(args: FloatingIconsArgs);
     destroy(): void;
 }
-export type CreateFloatingIcons = (args: Simplify<FloatingIconsArgs>) => FloatingIcons;
-export declare const createFloatingIcons: CreateFloatingIcons;
-export default createFloatingIcons;
+export type UseFloatingIcons = (args: Simplify<FloatingIconsArgs>) => FloatingIcons;
+export declare const useFloatingIcons: UseFloatingIcons;
+export default useFloatingIcons;
