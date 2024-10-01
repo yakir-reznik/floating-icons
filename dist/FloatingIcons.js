@@ -159,6 +159,7 @@ _FloatingIcons_args = new WeakMap(), _FloatingIcons_uuid = new WeakMap(), _Float
     }
     __classPrivateFieldSet(this, _FloatingIcons_containerEl, el, "f");
 }, _FloatingIcons_positionRelativeContainerEl = function _FloatingIcons_positionRelativeContainerEl(el) {
+    var _a;
     if (!__classPrivateFieldGet(this, _FloatingIcons_targetEl, "f"))
         throw new Error("target element not found");
     el.style.position = "absolute";
@@ -166,10 +167,18 @@ _FloatingIcons_args = new WeakMap(), _FloatingIcons_uuid = new WeakMap(), _Float
     el.style.left = "50%";
     el.style.whiteSpace = "nowrap";
     el.style.transform = "translate(-50%, -50%)";
+    el.style.zIndex = __classPrivateFieldGet(this, _FloatingIcons_args, "f").zIndex.toString();
     __classPrivateFieldGet(this, _FloatingIcons_targetEl, "f").style.overflow = "visible";
-    if (["", "static"].includes(__classPrivateFieldGet(this, _FloatingIcons_targetEl, "f").style.position)) {
+    const targetStyles = getComputedStyle(__classPrivateFieldGet(this, _FloatingIcons_targetEl, "f"));
+    // Set position to relative if it's static
+    if (targetStyles.position === "static") {
         __classPrivateFieldGet(this, _FloatingIcons_targetEl, "f").style.position = "relative";
     }
+    // set z-index to 0 if it hasn't been set
+    if (targetStyles.zIndex === "auto") {
+        __classPrivateFieldGet(this, _FloatingIcons_targetEl, "f").style.zIndex = "1";
+    }
+    (_a = document.querySelector("#my-btn")) === null || _a === void 0 ? void 0 : _a.computedStyleMap().get("z-index");
     __classPrivateFieldGet(this, _FloatingIcons_targetEl, "f").appendChild(el);
 }, _FloatingIcons_positionFixedContainerEl = function _FloatingIcons_positionFixedContainerEl(el) {
     if (!__classPrivateFieldGet(this, _FloatingIcons_targetEl, "f"))
@@ -216,14 +225,14 @@ _FloatingIcons_args = new WeakMap(), _FloatingIcons_uuid = new WeakMap(), _Float
     const duration = randomBetween(__classPrivateFieldGet(this, _FloatingIcons_args, "f").minDuration, __classPrivateFieldGet(this, _FloatingIcons_args, "f").maxDuration);
     const delay = randomBetween(__classPrivateFieldGet(this, _FloatingIcons_args, "f").minDelay, __classPrivateFieldGet(this, _FloatingIcons_args, "f").maxDelay);
     el.style.display = "inline-block";
-    el.style.animationName = `floating-icons-animation-${__classPrivateFieldGet(this, _FloatingIcons_uuid, "f")}`;
+    // el.style.animationName = `floating-icons-animation-${this.#uuid}`;
     el.style.animationDuration = `${duration}ms`;
     el.style.animationDelay = `${delay}ms`;
     el.style.animationTimingFunction = "linear";
     el.style.animationIterationCount = "1";
     el.style.animationFillMode = "forwards";
-    el.style.opacity = "0";
-    el.style.transform = "transltate(0,0) scale(0) rotate(0deg)";
+    // el.style.opacity = "0";
+    // el.style.transform = "transltate(0,0) scale(0) rotate(0deg)";
     if (__classPrivateFieldGet(this, _FloatingIcons_args, "f").debug) {
         el.style.border = "3px solid cyan";
     }

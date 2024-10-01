@@ -266,11 +266,16 @@ class FloatingIcons {
 		el.style.left = "50%";
 		el.style.whiteSpace = "nowrap";
 		el.style.transform = "translate(-50%, -50%)";
+		el.style.zIndex = this.#args.zIndex.toString();
 		this.#targetEl.style.overflow = "visible";
 
-		if (["", "static"].includes(this.#targetEl.style.position)) {
+		const targetStyles = getComputedStyle(this.#targetEl);
+
+		// Set position to relative if it's static
+		if (targetStyles.position === "static") {
 			this.#targetEl.style.position = "relative";
 		}
+
 		this.#targetEl.appendChild(el);
 	}
 
