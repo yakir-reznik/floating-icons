@@ -1,13 +1,14 @@
 {
 	"compilerOptions": {
 		"declaration": true, // Generate .d.ts files
-		"declarationDir": "./dist/types", // Specify output folder for types
+		"declarationDir": "./types", // Specify output folder for types
 		"emitDeclarationOnly": false, // Only generate declaration files
 		"outDir": "./dist", // Output compiled JS files
 		"target": "ES2016", // Choose target ES version, e.g. ES5, ES6
 		"module": "esnext", // Or "ES6" depending on your needs
 		"strict": true // Optional: Enforce strict type checks
 	},
-	"include": ["src/**/*.ts"], // Adjust the path to your TypeScript files
+	// "include": ["src/**/*.ts"], // Adjust the path to your TypeScript files
+	"include": ["src/**/*.ts"],
 	"exclude": ["node_modules"]
 }
