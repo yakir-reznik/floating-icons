@@ -4,13 +4,13 @@
 
 ## Quick links
 
-[Feautres](#features)
-[Installtion](#installation)
-[Basic usage](#basic-usage)
-[Options](#options)
-[How to customize the behavior](#how-to-customize-the-behavior)
-[How to use with existing element or with fixed screen coordinates](how-to-use-with-existing-element-or-with-fixed-screen-coordinates)
-[How to use with your own html content](how-to-use-with-your-own-html-content)
+[Features](#features)  
+[Installation](#installation)  
+[Basic usage](#basic-usage)  
+[Options](#options)  
+[How to customize the behavior](#how-to-customize-the-behavior)  
+[How to use with existing element or with fixed screen coordinates](#how-to-use-with-existing-element-or-with-fixed-screen-coordinates)  
+[How to use with your own html content](#how-to-use-with-your-own-html-content)  
 [Methods](#methods)
 
 ## Features
@@ -157,6 +157,7 @@ Instead of using emojis you can specify your own html elements in the elements.c
 ```typescript
 const myFirstHTMLElement = document.querySelector("my-first-html-element");
 const mySecondHTMLElement = document.querySelector("my-second-html-element");
+
 useFloatingIcons({
 	target: "#my-el",
 	elements: [
