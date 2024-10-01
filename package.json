@@ -1,6 +1,6 @@
 {
 	"name": "floating-icons",
-	"version": "1.0",
+	"version": "0.0.1",
 	"description": "An easy-to-use npm package that creates a fun floating emojis (or icons) animation effect that can be used to spice-up user interaction or for any other purpose",
 	"main": "dist/FloatingIcons.js",
 	"types": "dist/FloatingIcons.d.ts",
