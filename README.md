@@ -65,10 +65,10 @@ import useFloatingIcons from "floating-icons";
 
 const myBtn = document.querySelector("#my-btn");
 myBtn.addEventListener("click", () => {
-	useFloatingIcons({
-		target: "#my-btn",
-		/* options */
-	});
+  useFloatingIcons({
+    target: "#my-btn",
+    /* options */
+  });
 });
 ```
 
@@ -109,13 +109,13 @@ Use the `elements` option to pass an array of possible elements to render.
 
 ```typescript
 useFloatingIcons({
-	target: "#my-el",
-	elements: [
-		{ content: "❤️", probability: 3 },
-		{ content: "😄", probability: 2 },
-		{ content: "👍🏻", probability: 1 },
-		{ content: "✌🏻", probability: 1 },
-	],
+  target: "#my-el",
+  elements: [
+    { content: "❤️", probability: 3 },
+    { content: "😄", probability: 2 },
+    { content: "👍🏻", probability: 1 },
+    { content: "✌🏻", probability: 1 },
+  ],
 });
 ```
 
@@ -139,21 +139,21 @@ In order to render the effect on an existing element you can specify the elments
 ```typescript
 // Using with a selector
 useFloatingIcons({
-	target: "#my-btn",
+  target: "#my-btn",
 });
 
 // Using with an element reference
 const myBtn = document.querySelector("#my-btn");
 useFloatingIcons({
-	target: myBtn,
+  target: myBtn,
 });
 
 // Using with coordinates (positioned using positin:fixed)
 useFloatingIcons({
-	target: {
-		x: "200px",
-		y: "300px",
-	},
+  target: {
+    x: "200px",
+    y: "300px",
+  },
 });
 ```
 
@@ -166,17 +166,17 @@ const myFirstHTMLElement = document.querySelector("my-first-html-element");
 const mySecondHTMLElement = document.querySelector("my-second-html-element");
 
 useFloatingIcons({
-	target: "#my-el",
-	elements: [
-		{
-			content: myFirstHTMLElement,
-			probability: 1,
-		},
-		{
-			content: mySecondHTMLElement,
-			probability: 1,
-		},
-	],
+  target: "#my-el",
+  elements: [
+    {
+      content: myFirstHTMLElement,
+      probability: 1,
+    },
+    {
+      content: mySecondHTMLElement,
+      probability: 1,
+    },
+  ],
 });
 ```
 
@@ -189,7 +189,7 @@ You can call it manually if you want to destory the element before the animation
 ```typescript
 const floatingIcons = useFloatingIcons({ target: "#my-btn" });
 setTimeout(() => {
-	floatingIcons.destroy();
+  floatingIcons.destroy();
 }, 1000);
 ```
 
@@ -199,17 +199,17 @@ setTimeout(() => {
 import useFloatingIcons from "floating-icons";
 
 export function MyBtn() {
-	return (
-		<div className="App">
-			<button
-				onClick={useFloatingIcons({
-					target: "#my-btn",
-					/* options */
-				})}
-			>
-				Click me!
-			</button>
-		</div>
-	);
+  return (
+    <div className="App">
+      <button
+        onClick={useFloatingIcons({
+          target: "#my-btn",
+          /* options */
+        })}
+      >
+        Click me!
+      </button>
+    </div>
+  );
 }
 ```
