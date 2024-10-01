@@ -14,7 +14,6 @@ React: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stack
 
 Vue 3: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/edit/vitejs-vite-7ty7bc?file=src%2FApp.vue)
 
-
 ### Quick links
 
 [Live demos](#live-demos)  
@@ -36,6 +35,7 @@ Vue 3: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stack
 -   [x] Support for various CSS units for position, speed and animation.
 -   [x] Supports positioning on existing HTML elements or via specifiying fixed x & y values (like position:fixed)
 -   [x] Framework agnostic - works with any typescript and plain javascript project. (React, Vue, Svelte, Solid, ...)
+-   [x] 4.9kb when Gzipped
 
 ### Installation
 
@@ -76,10 +76,10 @@ import useFloatingIcons from "floating-icons";
 
 const myBtn = document.querySelector("#my-btn");
 myBtn.addEventListener("click", () => {
-  useFloatingIcons({
-    target: "#my-btn",
-    /* options */
-  });
+	useFloatingIcons({
+		target: "#my-btn",
+		/* options */
+	});
 });
 ```
 
@@ -88,26 +88,26 @@ myBtn.addEventListener("click", () => {
 Here's a list of all the options.
 Please read below the table for further explanation of how this package works and how you can customize its behaviour to your liking.
 
-| Option             | Description                                                                                                            | Type                                                                | Required | Default value                                                                                                                             |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `target`           | The element or screen coordinates on which to render the effect. The effect will be centered in the specified target.  | HTMLElement / CSS Selector / {x: '100px', y:'200px'}                |    ✅    | null                                                                                                                                      |
-| `elements`         | Array of elements to render. Random element will be rendered based on probability / totalProbability.                  | { content: string / HTMLElement, probability: number}[]             |          | [{ content: "❤️", probability: 3 },{ content: "😄", probability: 1 },{ content: "👍🏻", probability: 1 },{ content: "✌🏻", probability: 1 }] |
-| `debug`            | If "true" renders borders on all elements. helpfull for development.                                                   | boolean                                                             |          | false                                                                                                                                     |
-| `density`          | Controls the density in which the elements will render. Accepts a range between 0-1. 1 being most dense.               | number                                                              |          | 0.6                                                                                                                                       |
-| `distanceToTravel` | The distance elements will travel before fading out.                                                                   | Any valid css length value ("10px", "2rem", "5vw", ...)             |          | "100px"                                                                                                                                   |
-| `minDelay`         | Minimum delay (in ms) to start animating an element. Each element gets a random animation delay value within the range | number                                                              |          | 0                                                                                                                                         |
-| `maxDelay`         | Maximum delay (in ms) to start animating an element. Each element gets a random animation delay value within the range | number                                                              |          | 800                                                                                                                                       |
-| `minDuration`      | Minimum duration (in ms) of the animation. Each element gets a random animation duration value within the range        | number                                                              |          | 500                                                                                                                                       |
-| `maxDuration`      | Maximum duration (in ms) of the animation. Each element gets a random animation duration value within the range        | number                                                              |          | 1500                                                                                                                                      |
-| `minElementCount`  | Minimum amount of elements to render. A random amount will be rendered between the min and max range                   | number                                                              |          | 8                                                                                                                                         |
-| `maxElementCount`  | Maximum amount of elements to render. A random amount will be rendered between the min and max range                   | number                                                              |          | 12                                                                                                                                        |
-| `minRotation`      | Minimum rotation per element (in degrees). A random value within the range will be selected for each element           | number                                                              |          | -15                                                                                                                                       |
-| `maxRotation`      | Maximum rotation per element (in degrees). A random value within the range will be selected for each element           | number                                                              |          | 15                                                                                                                                        |
-| `minSize`          | Minimum size for a single element. A random value within the range will be selected for each element                   | Any valid css length value ("10px", "2rem", "5vw", ...)             |          | "20px"                                                                                                                                    |
-| `maxSize`          | Maximum size for a single element. A random value within the range will be selected for each element                   | Any valid css length value ("10px", "2rem", "5vw", ...)             |          | "40px"                                                                                                                                    |
-| `opacity`          | Maximum opacity for all elements                                                                                       | number / string                                                     |          | 1                                                                                                                                         |
-| `wiggle`           | The amount of which elements will wiggle from side to side                                                             | Any valid css length value ("10px", "2rem", "5vw", ...)             |          | "10px"                                                                                                                                    |
-| `zIndex`           | The z-index for the containing element                                                                                 | number / string                                                     |          | 0                                                                                                                                         |
+| Option             | Description                                                                                                            | Type                                                    | Required | Default value                                                                                                                             |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`           | The element or screen coordinates on which to render the effect. The effect will be centered in the specified target.  | HTMLElement / CSS Selector / {x: '100px', y:'200px'}    | ✅       | null                                                                                                                                      |
+| `elements`         | Array of elements to render. Random element will be rendered based on probability / totalProbability.                  | { content: string / HTMLElement, probability: number}[] |          | [{ content: "❤️", probability: 3 },{ content: "😄", probability: 1 },{ content: "👍🏻", probability: 1 },{ content: "✌🏻", probability: 1 }] |
+| `debug`            | If "true" renders borders on all elements. helpfull for development.                                                   | boolean                                                 |          | false                                                                                                                                     |
+| `density`          | Controls the density in which the elements will render. Accepts a range between 0-1. 1 being most dense.               | number                                                  |          | 0.6                                                                                                                                       |
+| `distanceToTravel` | The distance elements will travel before fading out.                                                                   | Any valid css length value ("10px", "2rem", "5vw", ...) |          | "100px"                                                                                                                                   |
+| `minDelay`         | Minimum delay (in ms) to start animating an element. Each element gets a random animation delay value within the range | number                                                  |          | 0                                                                                                                                         |
+| `maxDelay`         | Maximum delay (in ms) to start animating an element. Each element gets a random animation delay value within the range | number                                                  |          | 800                                                                                                                                       |
+| `minDuration`      | Minimum duration (in ms) of the animation. Each element gets a random animation duration value within the range        | number                                                  |          | 500                                                                                                                                       |
+| `maxDuration`      | Maximum duration (in ms) of the animation. Each element gets a random animation duration value within the range        | number                                                  |          | 1500                                                                                                                                      |
+| `minElementCount`  | Minimum amount of elements to render. A random amount will be rendered between the min and max range                   | number                                                  |          | 8                                                                                                                                         |
+| `maxElementCount`  | Maximum amount of elements to render. A random amount will be rendered between the min and max range                   | number                                                  |          | 12                                                                                                                                        |
+| `minRotation`      | Minimum rotation per element (in degrees). A random value within the range will be selected for each element           | number                                                  |          | -15                                                                                                                                       |
+| `maxRotation`      | Maximum rotation per element (in degrees). A random value within the range will be selected for each element           | number                                                  |          | 15                                                                                                                                        |
+| `minSize`          | Minimum size for a single element. A random value within the range will be selected for each element                   | Any valid css length value ("10px", "2rem", "5vw", ...) |          | "20px"                                                                                                                                    |
+| `maxSize`          | Maximum size for a single element. A random value within the range will be selected for each element                   | Any valid css length value ("10px", "2rem", "5vw", ...) |          | "40px"                                                                                                                                    |
+| `opacity`          | Maximum opacity for all elements                                                                                       | number / string                                         |          | 1                                                                                                                                         |
+| `wiggle`           | The amount of which elements will wiggle from side to side                                                             | Any valid css length value ("10px", "2rem", "5vw", ...) |          | "10px"                                                                                                                                    |
+| `zIndex`           | The z-index for the containing element                                                                                 | number / string                                         |          | 0                                                                                                                                         |
 
 ### How to customize the behavior
 
@@ -119,16 +119,16 @@ This means when each element is rendered a random value from the range (min to m
 Use the `elements` option to pass an array of possible elements to render.
 
 ```typescript
-import useFloatingIcons from 'floating-icons'
+import useFloatingIcons from "floating-icons";
 
 useFloatingIcons({
-  target: "#my-el",
-  elements: [
-    { content: "❤️", probability: 3 },
-    { content: "😄", probability: 2 },
-    { content: "👍🏻", probability: 1 },
-    { content: "✌🏻", probability: 1 },
-  ],
+	target: "#my-el",
+	elements: [
+		{ content: "❤️", probability: 3 },
+		{ content: "😄", probability: 2 },
+		{ content: "👍🏻", probability: 1 },
+		{ content: "✌🏻", probability: 1 },
+	],
 });
 ```
 
@@ -150,25 +150,25 @@ This results in an effect that appears new and exciting every time.
 In order to render the effect on an existing element you can specify the elments selector or a reference to the element.
 
 ```typescript
-import useFloatingIcons from 'floating-icons'
+import useFloatingIcons from "floating-icons";
 
 // Using with a selector
 useFloatingIcons({
-  target: "#my-btn",
+	target: "#my-btn",
 });
 
 // Using with an element reference
 const myBtn = document.querySelector("#my-btn");
 useFloatingIcons({
-  target: myBtn,
+	target: myBtn,
 });
 
 // Using with coordinates (positioned using positin:fixed)
 useFloatingIcons({
-  target: {
-    x: "200px",
-    y: "300px",
-  },
+	target: {
+		x: "200px",
+		y: "300px",
+	},
 });
 ```
 
@@ -181,23 +181,23 @@ The effect will be rendered in the center on the target element or the specified
 Instead of using emojis you can specify your own html elements in the elements.content option.
 
 ```typescript
-import useFloatingIcons from 'floating-icons'
+import useFloatingIcons from "floating-icons";
 
 const myFirstHTMLElement = document.querySelector("#my-first-html-element");
 const mySecondHTMLElement = document.querySelector("#my-second-html-element");
 
 useFloatingIcons({
-  target: "#my-el",
-  elements: [
-    {
-      content: myFirstHTMLElement,
-      probability: 1,
-    },
-    {
-      content: mySecondHTMLElement,
-      probability: 1,
-    },
-  ],
+	target: "#my-el",
+	elements: [
+		{
+			content: myFirstHTMLElement,
+			probability: 1,
+		},
+		{
+			content: mySecondHTMLElement,
+			probability: 1,
+		},
+	],
 });
 ```
 
@@ -208,12 +208,12 @@ this function is called automatically after the animation has finished.
 You can call it manually if you want to destory the element before the animation is complete.
 
 ```typescript
-import useFloatingIcons from 'floating-icons'
+import useFloatingIcons from "floating-icons";
 
 const floatingIcons = useFloatingIcons({ target: "#my-btn" });
 
 setTimeout(() => {
-  floatingIcons.destroy();
+	floatingIcons.destroy();
 }, 1000);
 ```
 
