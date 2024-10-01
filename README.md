@@ -108,12 +108,15 @@ This means when each element is rendered a random value from the range (min to m
 Use the `elements` option to pass an array of possible elements to render.
 
 ```typescript
-[
-	{ content: "❤️", probability: 3 },
-	{ content: "😄", probability: 2 },
-	{ content: "👍🏻", probability: 1 },
-	{ content: "✌🏻", probability: 1 },
-];
+useFloatingIcons({
+	target: "#my-el",
+	elements: [
+		{ content: "❤️", probability: 3 },
+		{ content: "😄", probability: 2 },
+		{ content: "👍🏻", probability: 1 },
+		{ content: "✌🏻", probability: 1 },
+	],
+});
 ```
 
 For each item in the array specify the "content" to render and a probability to render the item.
