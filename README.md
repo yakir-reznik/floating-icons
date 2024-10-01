@@ -19,12 +19,13 @@ This effect is perfect for adding fun and interactive visual effects to your pro
 
 ## Features
 
-[x] Animate multiple icons or emojis or any other HTML elements with configurable properties.
-[x] Control amount of elements, density, distance, delay, duration, size, and rotation of the elements.
-[x] Randomized rendering based on defined probabilities.
-[x] Support for various CSS units for position, speed and animation.
-[x] Supports positioning on existing HTML elements or via specifiying fixed x & y values (like position:fixed)
-[x] Framework agnostic - works with any typescript and plain javascript project. (React, Vue, Svelte, Solid, ...)
+
+- [x] Animate multiple icons or emojis or any other HTML elements with configurable properties.  
+- [x] Control amount of elements, density, distance, delay, duration, size, and rotation of the elements.  
+- [x] Randomized rendering based on defined probabilities.  
+- [x] Support for various CSS units for position, speed and animation.  
+- [x] Supports positioning on existing HTML elements or via specifiying fixed x & y values (like position:fixed)  
+- [x] Framework agnostic - works with any typescript and plain javascript project. (React, Vue, Svelte, Solid, ...)
 
 ## Installation
 
