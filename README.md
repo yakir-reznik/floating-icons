@@ -1,6 +1,10 @@
 # Floating Icons
 
-**Floating Icons** is a JavaScript library that allows you to create an engaging animation effect where emojis or icons float out and up from a specified target element on your webpage. This package is perfect for adding fun and interactive visual effects to your web projects.
+An easy to use package to create an engaging animation effect with emojis or icons that float out and up from a specified target element on your webpage.
+
+This effect is perfect for adding fun and interactive visual effects to your project.
+
+![Demo gif](https://github.com/user-attachments/assets/3528e188-63af-4c75-b949-6f4f47873367 "Demo gif")
 
 ## Quick links
 
