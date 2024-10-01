@@ -35,6 +35,7 @@ Vue 3: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stack
 -   [x] Support for various CSS units for position, speed and animation.
 -   [x] Supports positioning on existing HTML elements or via specifiying fixed x & y values (like position:fixed)
 -   [x] Framework agnostic - works with any typescript and plain javascript project. (React, Vue, Svelte, Solid, ...)
+-   [x] Super performat animations using CSS animations.
 -   [x] 4.9kb when Gzipped
 
 ### Installation
