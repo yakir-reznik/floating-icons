@@ -395,6 +395,11 @@ class FloatingIcons {
 			this.#targetEl?.remove();
 		}
 	}
+
+	// Public method to destroy the animation
+	destroy() {
+		this.#destroy();
+	}
 }
 
 function randomBetween(min: number, max: number) {
@@ -422,9 +427,9 @@ function parseCssValue(cssValue: string): [number, string] {
 	return [0, "px"];
 }
 
-export type CreateFloatingIcons = (
+export type UseFloatingIcons = (
 	args: Simplify<FloatingIconsArgs>
 ) => FloatingIcons;
-export const createFloatingIcons: CreateFloatingIcons = (args) =>
+export const useFloatingIcons: UseFloatingIcons = (args) =>
 	new FloatingIcons(args);
-export default createFloatingIcons;
+export default useFloatingIcons;

@@ -55,6 +55,7 @@ export type FloatingIconsArgs = Simplify<RequiredArgs & Partial<OptionalArgs>>;
 declare class FloatingIcons {
     #private;
     constructor(args: FloatingIconsArgs);
+    destroy(): void;
 }
 export type CreateFloatingIcons = (args: Simplify<FloatingIconsArgs>) => FloatingIcons;
 export declare const createFloatingIcons: CreateFloatingIcons;
