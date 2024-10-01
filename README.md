@@ -6,18 +6,29 @@ This effect is perfect for adding fun and interactive visual effects to your pro
 
 ![Demo gif](https://github.com/user-attachments/assets/3528e188-63af-4c75-b949-6f4f47873367 "Demo gif")
 
-## Quick links
+### Live demos
 
+javascript / typescript: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/edit/vitejs-vite-s5jhbb?file=index.html,src%2Fmain.ts)
+
+React: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/edit/vitejs-vite-8vcbsi?file=src%2FApp.tsx)
+
+Vue 3: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/edit/vitejs-vite-7ty7bc?file=src%2FApp.vue)
+
+
+### Quick links
+
+[Live demos](#live-demos)  
 [Features](#features)  
 [Installation](#installation)  
 [Basic usage](#basic-usage)  
+[Basic usage with React](#basic-usage-with-react)  
 [Options](#options)  
 [How to customize the behavior](#how-to-customize-the-behavior)  
 [How to use with existing element or with fixed screen coordinates](#how-to-use-with-existing-element-or-with-fixed-screen-coordinates)  
 [How to use with your own html content](#how-to-use-with-your-own-html-content)  
 [Methods](#methods)
 
-## Features
+### Features
 
 -   [x] Animate multiple icons or emojis or any other HTML elements with configurable properties.
 -   [x] Control amount of elements, density, distance, delay, duration, size, and rotation of the elements.
@@ -26,7 +37,7 @@ This effect is perfect for adding fun and interactive visual effects to your pro
 -   [x] Supports positioning on existing HTML elements or via specifiying fixed x & y values (like position:fixed)
 -   [x] Framework agnostic - works with any typescript and plain javascript project. (React, Vue, Svelte, Solid, ...)
 
-## Installation
+### Installation
 
 Simple installation via common package managers:
 
@@ -50,7 +61,7 @@ yarn add floating-icons
 
 Or install manually by copying the code from the [FloatingIcons.js](https://github.com/yakir-reznik/floating-icons/blob/master/dist/FloatingIcons.js) and pasting it to your project.
 
-## Basic usage
+### Basic usage
 
 HTML:
 
@@ -72,7 +83,7 @@ myBtn.addEventListener("click", () => {
 });
 ```
 
-## Options
+### Options
 
 Here's a list of all the options.
 Please read below the table for further explanation of how this package works and how you can customize its behaviour to your liking.
@@ -98,16 +109,18 @@ Please read below the table for further explanation of how this package works an
 | `wiggle`           | The amount of which elements will wiggle from side to side                                                             | Any valid css length value ("10px", "2rem", "5vw", ...)             |          | "10px"                                                                                                                                    |
 | `zIndex`           | The z-index for the containing element                                                                                 | number / string                                                     |          | 0                                                                                                                                         |
 
-## How to customize the behavior
+### How to customize the behavior
 
 Some of the options have a `min` and `max` value (`minDelay` and `maxDelay` for example).
 This means when each element is rendered a random value from the range (min to max) will be assigned.
 
-## How to change which emojis (or elements) the function renders
+### How to change which emojis (or elements) the function renders
 
 Use the `elements` option to pass an array of possible elements to render.
 
 ```typescript
+import useFloatingIcons from 'floating-icons'
+
 useFloatingIcons({
   target: "#my-el",
   elements: [
@@ -132,11 +145,13 @@ Since the selection is random the amounts and their location in the animation wi
 
 This results in an effect that appears new and exciting every time.
 
-## How to use with existing element or with fixed screen coordinates
+### How to use with existing element or with fixed screen coordinates
 
 In order to render the effect on an existing element you can specify the elments selector or a reference to the element.
 
 ```typescript
+import useFloatingIcons from 'floating-icons'
+
 // Using with a selector
 useFloatingIcons({
   target: "#my-btn",
@@ -161,13 +176,15 @@ The effect will be rendered in the center on the target element or the specified
 
 ![Centering example](https://github.com/user-attachments/assets/5369b829-33a5-453d-8b0d-5316a141aab8)
 
-## How to use with your own html content
+### How to use with your own html content
 
 Instead of using emojis you can specify your own html elements in the elements.content option.
 
 ```typescript
-const myFirstHTMLElement = document.querySelector("my-first-html-element");
-const mySecondHTMLElement = document.querySelector("my-second-html-element");
+import useFloatingIcons from 'floating-icons'
+
+const myFirstHTMLElement = document.querySelector("#my-first-html-element");
+const mySecondHTMLElement = document.querySelector("#my-second-html-element");
 
 useFloatingIcons({
   target: "#my-el",
@@ -184,20 +201,23 @@ useFloatingIcons({
 });
 ```
 
-## Methods
+### Methods
 
 `destroy`: destroys the animation element.
 this function is called automatically after the animation has finished.
 You can call it manually if you want to destory the element before the animation is complete.
 
 ```typescript
+import useFloatingIcons from 'floating-icons'
+
 const floatingIcons = useFloatingIcons({ target: "#my-btn" });
+
 setTimeout(() => {
   floatingIcons.destroy();
 }, 1000);
 ```
 
-## Basic usage with React
+### Basic usage with React
 
 ```jsx
 import useFloatingIcons from "floating-icons";
@@ -205,14 +225,30 @@ import useFloatingIcons from "floating-icons";
 export function MyBtn() {
   return (
     <div className="App">
-      <button
-        onClick={useFloatingIcons({
-          target: "#my-btn",
-          /* options */
-        })}
+     <button onClick={(e) => {
+          useFloatingIcons({
+            target: e.currentTarget as HTMLElement,
+            debug: false,
+            density: 0.6, // range from 0.0 - 1
+            distanceToTravel: '100px',
+            minDelay: 0, // ms
+            maxDelay: 800, // ms
+            minDuration: 500, // ms
+            maxDuration: 1500, // ms
+            minElementCount: 8, // number
+            maxElementCount: 12, // number
+            minRotation: -15, // degrees
+            maxRotation: 15, // degrees
+            minSize: '20px',
+            maxSize: '40px',
+            opacity: 1, // range from 0.0 - 1
+            wiggle: '10px', // sizeUnit
+            zIndex: 0,
+          });
+        }}
       >
-        Click me!
-      </button>
+	  	Click me!
+	  </button>
     </div>
   );
 }
