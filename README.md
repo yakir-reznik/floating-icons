@@ -4,9 +4,14 @@ An easy to use package to create an engaging animation effect with emojis or ico
 
 This effect is perfect for adding fun and interactive visual effects to your project.
 
+If you find this package helpful please consider giving it a [star on
+GitHub](https://github.com/yakir-reznik/floating-icons) ⭐
+
 ![Demo gif](https://github.com/user-attachments/assets/3528e188-63af-4c75-b949-6f4f47873367 "Demo gif")
 
 ### Live demos
+
+[Live web demo →](https://www.thereznik.com/open-source/floating-icons/)
 
 javascript / typescript: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/edit/vitejs-vite-s5jhbb?file=index.html,src%2Fmain.ts)
 
