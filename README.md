@@ -36,14 +36,14 @@ Svelte: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stac
 
 ### Features
 
--   [x] Animate multiple icons or emojis or any other HTML elements with configurable properties.
--   [x] Control amount of elements, density, distance, delay, duration, size, and rotation of the elements.
--   [x] Randomized rendering based on defined probabilities.
--   [x] Support for various CSS units for position, speed and animation.
--   [x] Supports positioning on existing HTML elements or via specifiying fixed x & y values (like position:fixed).
--   [x] Framework agnostic - works with any typescript and plain javascript project. (React, Vue, Svelte, Solid, ...).
--   [x] Super performat animations using CSS animations.
--   [x] 0 dependencies, less than 4kb when minified and gzipped.
+- [x] Animate multiple icons or emojis or any other HTML elements with configurable properties.
+- [x] Control amount of elements, density, distance, delay, duration, size, and rotation of the elements.
+- [x] Randomized rendering based on defined probabilities.
+- [x] Support for various CSS units for position, speed and animation.
+- [x] Supports positioning on existing HTML elements or via specifiying fixed x & y values (like position:fixed).
+- [x] Framework agnostic - works with any typescript and plain javascript project. (React, Vue, Svelte, Solid, ...).
+- [x] Super performat animations using CSS animations.
+- [x] 0 dependencies, less than 4kb when minified and gzipped.
 
 ### Installation
 
@@ -84,10 +84,10 @@ import useFloatingIcons from "floating-icons";
 
 const myBtn = document.querySelector("#my-btn");
 myBtn.addEventListener("click", () => {
-	useFloatingIcons({
-		target: "#my-btn",
-		/* options */
-	});
+  useFloatingIcons({
+    target: "#my-btn",
+    /* options */
+  });
 });
 ```
 
@@ -130,13 +130,13 @@ Use the `elements` option to pass an array of possible elements to render.
 import useFloatingIcons from "floating-icons";
 
 useFloatingIcons({
-	target: "#my-el",
-	elements: [
-		{ content: "❤️", probability: 3 },
-		{ content: "😄", probability: 2 },
-		{ content: "👍🏻", probability: 1 },
-		{ content: "✌🏻", probability: 1 },
-	],
+  target: "#my-el",
+  elements: [
+    { content: "❤️", probability: 3 },
+    { content: "😄", probability: 2 },
+    { content: "👍🏻", probability: 1 },
+    { content: "✌🏻", probability: 1 },
+  ],
 });
 ```
 
@@ -162,21 +162,21 @@ import useFloatingIcons from "floating-icons";
 
 // Using with a selector
 useFloatingIcons({
-	target: "#my-btn",
+  target: "#my-btn",
 });
 
 // Using with an element reference
 const myBtn = document.querySelector("#my-btn");
 useFloatingIcons({
-	target: myBtn,
+  target: myBtn,
 });
 
 // Using with coordinates (positioned using positin:fixed)
 useFloatingIcons({
-	target: {
-		x: "200px",
-		y: "300px",
-	},
+  target: {
+    x: "200px",
+    y: "300px",
+  },
 });
 ```
 
@@ -195,17 +195,17 @@ const myFirstHTMLElement = document.querySelector("#my-first-html-element");
 const mySecondHTMLElement = document.querySelector("#my-second-html-element");
 
 useFloatingIcons({
-	target: "#my-el",
-	elements: [
-		{
-			content: myFirstHTMLElement,
-			probability: 1,
-		},
-		{
-			content: mySecondHTMLElement,
-			probability: 1,
-		},
-	],
+  target: "#my-el",
+  elements: [
+    {
+      content: myFirstHTMLElement,
+      probability: 1,
+    },
+    {
+      content: mySecondHTMLElement,
+      probability: 1,
+    },
+  ],
 });
 ```
 
@@ -221,7 +221,7 @@ import useFloatingIcons from "floating-icons";
 const floatingIcons = useFloatingIcons({ target: "#my-btn" });
 
 setTimeout(() => {
-	floatingIcons.destroy();
+  floatingIcons.destroy();
 }, 1000);
 ```
 
