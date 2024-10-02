@@ -35,10 +35,10 @@ Svelte: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stac
 -   [x] Control amount of elements, density, distance, delay, duration, size, and rotation of the elements.
 -   [x] Randomized rendering based on defined probabilities.
 -   [x] Support for various CSS units for position, speed and animation.
--   [x] Supports positioning on existing HTML elements or via specifiying fixed x & y values (like position:fixed)
--   [x] Framework agnostic - works with any typescript and plain javascript project. (React, Vue, Svelte, Solid, ...)
+-   [x] Supports positioning on existing HTML elements or via specifiying fixed x & y values (like position:fixed).
+-   [x] Framework agnostic - works with any typescript and plain javascript project. (React, Vue, Svelte, Solid, ...).
 -   [x] Super performat animations using CSS animations.
--   [x] Less than 4kb when minified and Gzipped
+-   [x] 0 dependencies, less than 4kb when minified and gzipped.
 
 ### Installation
 
