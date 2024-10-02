@@ -14,6 +14,8 @@ React: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stack
 
 Vue 3: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/edit/vitejs-vite-7ty7bc?file=src%2FApp.vue)
 
+Svelte: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/edit/vitejs-vite-nhxh9u?file=src%2FApp.svelte)
+
 ### Quick links
 
 [Live demos](#live-demos)  
@@ -77,10 +79,10 @@ import useFloatingIcons from "floating-icons";
 
 const myBtn = document.querySelector("#my-btn");
 myBtn.addEventListener("click", () => {
-  useFloatingIcons({
-    target: "#my-btn",
-    /* options */
-  });
+	useFloatingIcons({
+		target: "#my-btn",
+		/* options */
+	});
 });
 ```
 
@@ -123,13 +125,13 @@ Use the `elements` option to pass an array of possible elements to render.
 import useFloatingIcons from "floating-icons";
 
 useFloatingIcons({
-  target: "#my-el",
-  elements: [
-    { content: "❤️", probability: 3 },
-    { content: "😄", probability: 2 },
-    { content: "👍🏻", probability: 1 },
-    { content: "✌🏻", probability: 1 },
-  ],
+	target: "#my-el",
+	elements: [
+		{ content: "❤️", probability: 3 },
+		{ content: "😄", probability: 2 },
+		{ content: "👍🏻", probability: 1 },
+		{ content: "✌🏻", probability: 1 },
+	],
 });
 ```
 
@@ -155,21 +157,21 @@ import useFloatingIcons from "floating-icons";
 
 // Using with a selector
 useFloatingIcons({
-  target: "#my-btn",
+	target: "#my-btn",
 });
 
 // Using with an element reference
 const myBtn = document.querySelector("#my-btn");
 useFloatingIcons({
-  target: myBtn,
+	target: myBtn,
 });
 
 // Using with coordinates (positioned using positin:fixed)
 useFloatingIcons({
-  target: {
-    x: "200px",
-    y: "300px",
-  },
+	target: {
+		x: "200px",
+		y: "300px",
+	},
 });
 ```
 
@@ -188,17 +190,17 @@ const myFirstHTMLElement = document.querySelector("#my-first-html-element");
 const mySecondHTMLElement = document.querySelector("#my-second-html-element");
 
 useFloatingIcons({
-  target: "#my-el",
-  elements: [
-    {
-      content: myFirstHTMLElement,
-      probability: 1,
-    },
-    {
-      content: mySecondHTMLElement,
-      probability: 1,
-    },
-  ],
+	target: "#my-el",
+	elements: [
+		{
+			content: myFirstHTMLElement,
+			probability: 1,
+		},
+		{
+			content: mySecondHTMLElement,
+			probability: 1,
+		},
+	],
 });
 ```
 
@@ -214,7 +216,7 @@ import useFloatingIcons from "floating-icons";
 const floatingIcons = useFloatingIcons({ target: "#my-btn" });
 
 setTimeout(() => {
-  floatingIcons.destroy();
+	floatingIcons.destroy();
 }, 1000);
 ```
 
